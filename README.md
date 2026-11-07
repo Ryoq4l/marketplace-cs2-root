@@ -27,6 +27,8 @@
 
 **Шаг 1.** Создайте папку для проекта и клонируйте все репозитории:
 
+```bash
+
 mkdir marketplace && cd marketplace
 
 git clone https://github.com/Ryoq4l/marketplace-infra.git
@@ -36,7 +38,7 @@ git clone https://github.com/Ryoq4l/marketplace-wallet.git
 git clone https://github.com/Ryoq4l/marketplace-catalog.git
 git clone https://github.com/Ryoq4l/marketplace-order.git
 git clone https://github.com/Ryoq4l/marketplace-gateway.git
-
+```
 Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
 
 cd marketplace-infra
@@ -48,12 +50,13 @@ http://localhost:8080/swagger-ui.html
 
 Стек технологий:
 
-Java 21 / Spring Boot 4.1
-Spring Cloud (Eureka, Gateway, OpenFeign)
-Spring Data JPA / Hibernate
-MySQL 8.4
-Docker / Docker Compose
-JWT / OAuth2 (Steam)
-Swagger / OpenAPI 3
+    Java 21
+    Spring Boot 4.1
+    Spring Cloud (Eureka, Gateway, OpenFeign)
+    Spring Data JPA / Hibernate
+    MySQL 8.4
+    Docker / Docker Compose
+    JWT / OAuth2 (Steam)
+    Swagger / OpenAPI 3
 
 
