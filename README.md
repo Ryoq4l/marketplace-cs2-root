@@ -21,11 +21,9 @@
 ### Инфраструктура
 - [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
 
-### Быстрый старт
+## Запуск проекта(manual)
 
-Для запуска всего проекта потребуется **Docker** и **Docker Compose**.
-
-## Шаг 1. Создайте папку для проекта и клонируйте все репозитории:
+### Шаг 1. Создайте папку для проекта и клонируйте все репозитории:
 
 ```bash
 
@@ -39,18 +37,53 @@ git clone https://github.com/Ryoq4l/marketplace-catalog.git
 git clone https://github.com/Ryoq4l/marketplace-order.git
 git clone https://github.com/Ryoq4l/marketplace-gateway.git
 ```
-## Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
+### Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
 
 ```bash
 cd marketplace-infra
 docker compose up -d --build
 ```
 
-## Шаг 3. Откройте Swagger UI для тестирования API:
+### Шаг 3. Откройте Swagger UI для тестирования API:
 
 http://localhost:8080/swagger-ui.html
 
-### Стек технологий
+##Автоматический запуск
+
+**Для Windows:**
+1. Скачайте скрипт: [install-and-clone.bat](https://github.com/Ryoq4l/marketplace-infra/blob/main/scripts/install-and-clone.bat) (нажмите "Raw" и сохраните файл).
+2. Нажмите на скачанный файл правой кнопкой мыши и выберите **"Запуск от имени администратора"**.
+3. Дождитесь завершения установки. Скрипт сам создаст папку `Desktop\marketplace` и склонирует туда все сервисы.
+4. **Перезагрузите компьютер** (чтобы применились настройки Java и Docker).
+
+**Для Linux (Ubuntu/Debian):**
+1. Скачайте скрипт:
+```bash
+wget https://raw.githubusercontent.com/Ryoq4l/marketplace-infra/main/scripts/install-and-clone.sh
+```
+2.Дайте ему права на исполнение и запустите
+```bash
+chmod +x install-and-clone.sh
+sudo ./install-and-clone.sh
+```
+
+3.Скрипт создаст папку Desktop/marketplace (или ~/marketplace), склонирует проект и настроит Docker
+
+###Постустановка
+1.Запустите Docker Desktop (на Windows) или убедитесь, что Docker работает (на Linux)
+2.Перейдите в папку с проектом:
+```bash
+cd Desktop/marketplace/marketplace-infra   # Windows
+cd ~/Desktop/marketplace/marketplace-infra  # Linux
+```
+3.Запустите сборку:
+```bash
+docker compose up -d --build
+```
+
+4.Откройте Swagger UI:
+http://localhost:8080/swagger-ui.html
+## Стек технологий
 
     Java 21
     Spring Boot 4.1
