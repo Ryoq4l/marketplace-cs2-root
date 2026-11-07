@@ -44,18 +44,6 @@ sudo ./install-and-clone.sh
 
 3.Скрипт создаст папку Desktop/marketplace (или ~/marketplace), склонирует проект и настроит Docker
 
-### Постустановка
-1.Запустите Docker Desktop (на Windows) или убедитесь, что Docker работает (на Linux)
-2.Перейдите в папку с проектом:
-```bash
-cd Desktop/marketplace/marketplace-infra   # Windows
-cd ~/Desktop/marketplace/marketplace-infra  # Linux
-```
-3.Запустите сборку:
-```bash
-docker compose up -d --build
-```
-
 4.Откройте Swagger UI:
 http://localhost:8080/swagger-ui.html
 
@@ -103,6 +91,18 @@ cd marketplace-infra
 docker compose up -d --build
 ```
 4. Откройте Swagger UI: http://localhost:8080/swagger-ui.html
+
+### Постустановка
+1.Запустите Docker Desktop (на Windows) или убедитесь, что Docker работает (на Linux)
+2.Перейдите в папку с проектом:
+```bash
+cd Desktop/marketplace/marketplace-infra   # Windows
+cd ~/Desktop/marketplace/marketplace-infra  # Linux
+```
+3.Запустите сборку:
+```bash
+docker compose up -d --build
+```
 
 ## Стек технологий
 
