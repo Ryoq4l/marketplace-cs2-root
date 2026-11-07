@@ -21,34 +21,9 @@
 ### Инфраструктура
 - [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
 
-## Запуск проекта(manual)
+## Запуск проекта
 
-### Шаг 1. Создайте папку для проекта и клонируйте все репозитории:
-
-```bash
-
-mkdir marketplace && cd marketplace
-
-git clone https://github.com/Ryoq4l/marketplace-infra.git
-git clone https://github.com/Ryoq4l/marketplace-eureka.git
-git clone https://github.com/Ryoq4l/marketplace-auth.git
-git clone https://github.com/Ryoq4l/marketplace-wallet.git
-git clone https://github.com/Ryoq4l/marketplace-catalog.git
-git clone https://github.com/Ryoq4l/marketplace-order.git
-git clone https://github.com/Ryoq4l/marketplace-gateway.git
-```
-### Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
-
-```bash
-cd marketplace-infra
-docker compose up -d --build
-```
-
-### Шаг 3. Откройте Swagger UI для тестирования API:
-
-http://localhost:8080/swagger-ui.html
-
-##Автоматический запуск
+### Автоматический запуск
 
 **Для Windows:**
 1. Скачайте скрипт: [install-and-clone.bat](https://github.com/Ryoq4l/marketplace-infra/blob/main/scripts/install-and-clone.bat) (нажмите "Raw" и сохраните файл).
@@ -69,7 +44,7 @@ sudo ./install-and-clone.sh
 
 3.Скрипт создаст папку Desktop/marketplace (или ~/marketplace), склонирует проект и настроит Docker
 
-###Постустановка
+### Постустановка
 1.Запустите Docker Desktop (на Windows) или убедитесь, что Docker работает (на Linux)
 2.Перейдите в папку с проектом:
 ```bash
@@ -83,6 +58,52 @@ docker compose up -d --build
 
 4.Откройте Swagger UI:
 http://localhost:8080/swagger-ui.html
+
+### Ручной запуск
+Если вы предпочитаете контролировать каждый шаг, установите Docker и Git вручную. Затем выполните:
+
+**Для Windows:**
+```bash
+# 1. Переходим на Рабочий стол и создаем папку
+cd $HOME\Desktop
+mkdir marketplace
+cd marketplace
+
+# 2. Клонируем все репозитории
+git clone https://github.com/Ryoq4l/marketplace-infra.git
+git clone https://github.com/Ryoq4l/marketplace-eureka.git
+git clone https://github.com/Ryoq4l/marketplace-auth.git
+git clone https://github.com/Ryoq4l/marketplace-wallet.git
+git clone https://github.com/Ryoq4l/marketplace-catalog.git
+git clone https://github.com/Ryoq4l/marketplace-order.git
+git clone https://github.com/Ryoq4l/marketplace-gateway.git
+
+# 3. Запускаем проект
+cd marketplace-infra
+docker compose up -d --build
+```
+**Для Linux (Ubuntu/Debian):**
+```bash
+# 1. Переходим на Рабочий стол и создаем папку
+cd ~/Desktop
+mkdir marketplace
+cd marketplace
+
+# 2. Клонируем все репозитории
+git clone https://github.com/Ryoq4l/marketplace-infra.git
+git clone https://github.com/Ryoq4l/marketplace-eureka.git
+git clone https://github.com/Ryoq4l/marketplace-auth.git
+git clone https://github.com/Ryoq4l/marketplace-wallet.git
+git clone https://github.com/Ryoq4l/marketplace-catalog.git
+git clone https://github.com/Ryoq4l/marketplace-order.git
+git clone https://github.com/Ryoq4l/marketplace-gateway.git
+
+# 3. Запускаем проект
+cd marketplace-infra
+docker compose up -d --build
+```
+4. Откройте Swagger UI: http://localhost:8080/swagger-ui.html
+
 ## Стек технологий
 
     Java 21
