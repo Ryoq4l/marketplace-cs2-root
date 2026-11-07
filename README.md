@@ -3,7 +3,7 @@
 Микросервисный бэкенд для торговой площадки скинов CS2. 
 Проект построен на Java 21, Spring Boot 4 и Spring Cloud.
 
-## Архитектура
+### Архитектура
 
 Проект разделен на независимые микросервисы, которые общаются друг с другом через Eureka (Service Discovery) и Feign (HTTP-клиенты).
 
@@ -21,11 +21,11 @@
 ### Инфраструктура
 - [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
 
-## Быстрый старт
+### Быстрый старт
 
 Для запуска всего проекта потребуется **Docker** и **Docker Compose**.
 
-**Шаг 1.** Создайте папку для проекта и клонируйте все репозитории:
+## Шаг 1. Создайте папку для проекта и клонируйте все репозитории:
 
 ```bash
 
@@ -39,16 +39,18 @@ git clone https://github.com/Ryoq4l/marketplace-catalog.git
 git clone https://github.com/Ryoq4l/marketplace-order.git
 git clone https://github.com/Ryoq4l/marketplace-gateway.git
 ```
-Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
+## Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
 
+```bash
 cd marketplace-infra
 docker compose up -d --build
+```
 
-Шаг 3. Откройте Swagger UI для тестирования API:
+## Шаг 3. Откройте Swagger UI для тестирования API:
 
 http://localhost:8080/swagger-ui.html
 
-## Стек технологий
+### Стек технологий
 
     Java 21
     Spring Boot 4.1
