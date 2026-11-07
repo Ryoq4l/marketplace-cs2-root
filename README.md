@@ -19,13 +19,41 @@
 | [Eureka Server](https://github.com/Ryoq4l/marketplace-eureka) | `8761` | Service Discovery (реестр сервисов) |
 
 ### Инфраструктура
-- [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka, Steam-proxy.
+- [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
 
 ## Быстрый старт
 
-Для запуска всего проекта потребуется Docker и Docker Compose.
+Для запуска всего проекта потребуется **Docker** и **Docker Compose**.
 
-1. Клонируйте репозиторий с инфраструктурой:
-   ```bash
-   git clone https://github.com/Ryoq4l/marketplace-infra.git
-   cd marketplace-infra
+**Шаг 1.** Создайте папку для проекта и клонируйте все репозитории:
+
+mkdir marketplace && cd marketplace
+
+git clone https://github.com/Ryoq4l/marketplace-infra.git
+git clone https://github.com/Ryoq4l/marketplace-eureka.git
+git clone https://github.com/Ryoq4l/marketplace-auth.git
+git clone https://github.com/Ryoq4l/marketplace-wallet.git
+git clone https://github.com/Ryoq4l/marketplace-catalog.git
+git clone https://github.com/Ryoq4l/marketplace-order.git
+git clone https://github.com/Ryoq4l/marketplace-gateway.git
+
+Шаг 2. Перейдите в папку инфраструктуры и запустите сборку
+
+cd marketplace-infra
+docker compose up -d --build
+
+Шаг 3. Откройте Swagger UI для тестирования API:
+
+http://localhost:8080/swagger-ui.html
+
+Стек технологий:
+
+Java 21 / Spring Boot 4.1
+Spring Cloud (Eureka, Gateway, OpenFeign)
+Spring Data JPA / Hibernate
+MySQL 8.4
+Docker / Docker Compose
+JWT / OAuth2 (Steam)
+Swagger / OpenAPI 3
+
+
