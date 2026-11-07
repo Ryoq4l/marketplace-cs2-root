@@ -48,7 +48,7 @@ docker compose up -d --build
 
 http://localhost:8080/swagger-ui.html
 
-Стек технологий:
+## Стек технологий
 
     Java 21
     Spring Boot 4.1
