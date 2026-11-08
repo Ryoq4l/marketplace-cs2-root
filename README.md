@@ -17,6 +17,7 @@
 | [Catalog Service](https://github.com/Ryoq4l/marketplace-catalog) | `8083` | Каталог скинов, инвентарь, листинги |
 | [Order Service](https://github.com/Ryoq4l/marketplace-order) | `8084` | Оркестратор заказов, Trade Protection |
 | [Eureka Server](https://github.com/Ryoq4l/marketplace-eureka) | `8761` | Service Discovery (реестр сервисов) |
+| [Common](https://github.com/Ryoq4l/marketplace-common) | `none` | Exception handler (локальный) |
 
 ### Инфраструктура
 - [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
