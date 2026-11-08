@@ -21,6 +21,11 @@
 ### Инфраструктура
 - [Marketplace Infra](https://github.com/Ryoq4l/marketplace-infra) — Docker Compose, MySQL, Kafka(TBD), Steam-proxy.
 
+## Требования
+- Docker Desktop (Windows/Mac) или Docker Engine (Linux)
+- Docker Compose v2
+- Git
+
 ## Запуск проекта
 
 ### Автоматический запуск
@@ -65,6 +70,7 @@ git clone https://github.com/Ryoq4l/marketplace-wallet.git
 git clone https://github.com/Ryoq4l/marketplace-catalog.git
 git clone https://github.com/Ryoq4l/marketplace-order.git
 git clone https://github.com/Ryoq4l/marketplace-gateway.git
+git clone https://github.com/Ryoq4l/marketplace-common.git
 
 # 3. Запускаем проект
 cd marketplace-infra
@@ -85,6 +91,7 @@ git clone https://github.com/Ryoq4l/marketplace-wallet.git
 git clone https://github.com/Ryoq4l/marketplace-catalog.git
 git clone https://github.com/Ryoq4l/marketplace-order.git
 git clone https://github.com/Ryoq4l/marketplace-gateway.git
+git clone https://github.com/Ryoq4l/marketplace-common.git
 
 # 3. Запускаем проект
 cd marketplace-infra
@@ -103,6 +110,11 @@ cd ~/Desktop/marketplace/marketplace-infra  # Linux
 ```bash
 docker compose up -d --build
 ```
+## API Endpoints (через Gateway)
+- `GET /api/v1/items` — каталог скинов
+- `POST /api/v1/orders` — создание заказа
+- `POST /api/v1/wallets` — создание кошелька
+- `GET /oauth2/authorization/steam` — вход через Steam
 
 ## Стек технологий
 
